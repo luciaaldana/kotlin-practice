@@ -1,4 +1,4 @@
-package com.example.kotlin_practice.homework
+package com.example.kotlin_practice
 
     fun ejercicio1() {
         // TODO: Declara una variable inmutable (val) llamada nombre de tipo String
