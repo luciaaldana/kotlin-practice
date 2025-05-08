@@ -110,7 +110,21 @@ package com.example.kotlin_practice
         println("Primer número divisible por 2 y 3: $numero")
     }
 
+fun operar(a:Int, b:Int, operacion:(Int, Int) -> Int): Int {
+    return operacion(a,b)
+}
+
+val sumar: ( Int, Int) -> Int = { x, y -> x + y }
+
+val encontrarEl10 = listOf(1,2,3,4,5).find {it == 10} ?: "no hay"
+
+
 fun main() {
+    println(encontrarEl10)
+    val suma = operar(3,5){x,y-> x + y}
+    println("El resultado de la suma es $suma")
+    println(suma)
+    println(  operar(4,6, sumar ))
     println("---- Ejercicio 1 ----")
     println("Declarar variables nombre como String, edad como Int y dirección como String nulleable")
     ejercicio1()
